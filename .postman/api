@@ -1,14 +1,17 @@
-id = 41ed4cd8-0ea6-403c-8961-fcf7b5279ec7
+id = 52ee0774-fe74-46da-99d2-f05b5517fd33
 
 [relations]
 
 [relations.collections]
 rootDirectory = postman/collections
+files[] = {"id":"6fbc03c9-1b08-4624-bc3b-205e387989d2","path":"Petstore reference_896503-dc26d8a9-8c3d-4f96-805c-3d581703b4b9.json","metaData":{}}
+files[] = {"id":"44fcc990-5256-4122-b790-dec69a517606","path":"Second pet collection_896503-c4e64f95-a050-44ee-b11a-1858dc92ea41.json","metaData":{}}
 
 [relations.collections.metaData]
 
 [relations.apiDefinition]
 rootDirectory = postman/schemas
+files[] = {"path":"index.yaml","metaData":{}}
 
 [relations.apiDefinition.metaData]
 type = openapi:3

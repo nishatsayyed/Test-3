@@ -1,66 +1,71 @@
 {
+	"info": {
+		"_postman_id": "44fcc990-5256-4122-b790-dec69a517606",
+		"name": "Second pet collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "896503-44fcc990-5256-4122-b790-dec69a517606"
+	},
 	"item": [
 		{
-			"id": "33cce52b-2fee-4541-a34e-1ee68af684fa",
 			"name": "pets",
 			"item": [
 				{
-					"id": "ebd80981-5f13-4158-92b3-1fbe619ab101",
 					"name": "List all pets",
+					"id": "d427effa-c6a0-4b52-bc09-ca55569f1454",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
-						"name": "List all pets",
-						"description": {},
-						"url": {
-							"path": [
-								"pets"
-							],
-							"host": [
-								"{{baseUrl}}"
-							],
-							"query": [
-								{
-									"disabled": false,
-									"key": "limit",
-									"value": "32885219",
-									"description": "How many items to return at one time (max 100)"
-								}
-							],
-							"variable": []
-						},
+						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
 								"value": "application/json"
 							}
 						],
-						"method": "GET",
-						"auth": null
+						"url": {
+							"raw": "{{baseUrl}}/pets?limit=32885219",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"pets"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "32885219",
+									"description": "How many items to return at one time (max 100)"
+								}
+							]
+						}
 					},
 					"response": [
 						{
-							"id": "a38eaaa5-31eb-43a3-898c-65e40ec67bb9",
+							"id": "11256222-deaf-418c-812f-90440b4121a0",
 							"name": "A paged array of pets",
 							"originalRequest": {
+								"method": "GET",
+								"header": [],
 								"url": {
-									"path": [
-										"pets"
-									],
+									"raw": "{{baseUrl}}/pets?limit=32885219",
 									"host": [
 										"{{baseUrl}}"
+									],
+									"path": [
+										"pets"
 									],
 									"query": [
 										{
 											"key": "limit",
 											"value": "32885219"
 										}
-									],
-									"variable": []
-								},
-								"method": "GET",
-								"body": {}
+									]
+								}
 							},
 							"status": "OK",
 							"code": 200,
+							"_postman_previewlanguage": "json",
 							"header": [
 								{
 									"disabled": false,
@@ -73,276 +78,245 @@
 									"value": "application/json"
 								}
 							],
-							"body": "[\n  {\n    \"id\": 47354237,\n    \"name\": \"nulla voluptate\",\n    \"tag\": \"laborum consequat anim dolore eu\"\n  },\n  {\n    \"id\": 30738437,\n    \"name\": \"et\",\n    \"tag\": \"aute dolore\"\n  }\n]",
 							"cookie": [],
-							"_postman_previewlanguage": "json"
+							"body": "[\n  {\n    \"id\": 47354237,\n    \"name\": \"nulla voluptate\",\n    \"tag\": \"laborum consequat anim dolore eu\"\n  },\n  {\n    \"id\": 30738437,\n    \"name\": \"et\",\n    \"tag\": \"aute dolore\"\n  }\n]"
 						},
 						{
-							"id": "3a1e4808-0788-4e7c-9e0c-97300ed61a75",
+							"id": "9c5e9cb3-d5b4-43ea-b13b-a69970429147",
 							"name": "unexpected error",
 							"originalRequest": {
+								"method": "GET",
+								"header": [],
 								"url": {
-									"path": [
-										"pets"
-									],
+									"raw": "{{baseUrl}}/pets?limit=32885219",
 									"host": [
 										"{{baseUrl}}"
+									],
+									"path": [
+										"pets"
 									],
 									"query": [
 										{
 											"key": "limit",
 											"value": "32885219"
 										}
-									],
-									"variable": []
-								},
-								"method": "GET",
-								"body": {}
+									]
+								}
 							},
 							"status": "Internal Server Error",
 							"code": 500,
+							"_postman_previewlanguage": "json",
 							"header": [
 								{
 									"key": "Content-Type",
 									"value": "application/json"
 								}
 							],
-							"body": "{\n  \"code\": 96595496,\n  \"message\": \"aliqua deserunt aliquip\"\n}",
 							"cookie": [],
-							"_postman_previewlanguage": "json"
+							"body": "{\n  \"code\": 96595496,\n  \"message\": \"aliqua deserunt aliquip\"\n}"
 						}
-					],
-					"event": [],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					}
+					]
 				},
 				{
-					"id": "038c38e4-4aee-4ebd-af85-028dec798fe3",
 					"name": "Create a pet",
+					"id": "5fad0536-29c4-40bb-9fe1-88e2344160f4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
-						"name": "Create a pet",
-						"description": {},
-						"url": {
-							"path": [
-								"pets"
-							],
-							"host": [
-								"{{baseUrl}}"
-							],
-							"query": [],
-							"variable": []
-						},
+						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
 								"value": "application/json"
 							}
 						],
-						"method": "POST",
-						"auth": null
+						"url": {
+							"raw": "{{baseUrl}}/pets",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"pets"
+							]
+						}
 					},
 					"response": [
 						{
-							"id": "5e8fe0f7-fa3e-4a41-84ed-0cd1573e9bfe",
+							"id": "544b8643-edd1-4e0c-8d3b-b472eacd9e3c",
 							"name": "Null response",
 							"originalRequest": {
+								"method": "POST",
+								"header": [],
 								"url": {
-									"path": [
-										"pets"
-									],
+									"raw": "{{baseUrl}}/pets",
 									"host": [
 										"{{baseUrl}}"
 									],
-									"query": [],
-									"variable": []
-								},
-								"method": "POST",
-								"body": {}
+									"path": [
+										"pets"
+									]
+								}
 							},
 							"status": "Created",
 							"code": 201,
+							"_postman_previewlanguage": "text",
 							"header": [
 								{
 									"key": "Content-Type",
 									"value": "text/plain"
 								}
 							],
-							"body": "",
 							"cookie": [],
-							"_postman_previewlanguage": "text"
+							"body": ""
 						},
 						{
-							"id": "c83644e3-8c68-4cfc-b482-a09ef1a19ed9",
+							"id": "faed46df-ee0c-41e6-bc8f-92570bae205d",
 							"name": "unexpected error",
 							"originalRequest": {
+								"method": "POST",
+								"header": [],
 								"url": {
-									"path": [
-										"pets"
-									],
+									"raw": "{{baseUrl}}/pets",
 									"host": [
 										"{{baseUrl}}"
 									],
-									"query": [],
-									"variable": []
-								},
-								"method": "POST",
-								"body": {}
+									"path": [
+										"pets"
+									]
+								}
 							},
 							"status": "Internal Server Error",
 							"code": 500,
+							"_postman_previewlanguage": "json",
 							"header": [
 								{
 									"key": "Content-Type",
 									"value": "application/json"
 								}
 							],
-							"body": "{\n  \"code\": 96595496,\n  \"message\": \"aliqua deserunt aliquip\"\n}",
 							"cookie": [],
-							"_postman_previewlanguage": "json"
+							"body": "{\n  \"code\": 96595496,\n  \"message\": \"aliqua deserunt aliquip\"\n}"
 						}
-					],
-					"event": [],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					}
+					]
 				},
 				{
-					"id": "ad61a260-a67a-4b36-b21b-eaccf8953ef9",
 					"name": "Info for a specific pet",
+					"id": "cebac7bb-8c25-42d8-91b3-240c40b9f182",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
-						"name": "Info for a specific pet",
-						"description": {},
-						"url": {
-							"path": [
-								"pets",
-								":petId"
-							],
-							"host": [
-								"{{baseUrl}}"
-							],
-							"query": [],
-							"variable": [
-								{
-									"disabled": false,
-									"type": "any",
-									"value": "est laborum dolore exercitation",
-									"key": "petId",
-									"description": "(Required) The id of the pet to retrieve"
-								}
-							]
-						},
+						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
 								"value": "application/json"
 							}
 						],
-						"method": "GET",
-						"auth": null
+						"url": {
+							"raw": "{{baseUrl}}/pets/:petId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"pets",
+								":petId"
+							],
+							"variable": [
+								{
+									"key": "petId",
+									"value": "est laborum dolore exercitation",
+									"description": "(Required) The id of the pet to retrieve"
+								}
+							]
+						}
 					},
 					"response": [
 						{
-							"id": "0b59032d-1080-47de-af95-d0729d4bc26d",
+							"id": "cd6a7617-ca25-4fee-a4d8-94c4dc6c7791",
 							"name": "Expected response to a valid request",
 							"originalRequest": {
+								"method": "GET",
+								"header": [],
 								"url": {
+									"raw": "{{baseUrl}}/pets/:petId",
+									"host": [
+										"{{baseUrl}}"
+									],
 									"path": [
 										"pets",
 										":petId"
 									],
-									"host": [
-										"{{baseUrl}}"
-									],
-									"query": [],
 									"variable": [
 										{
-											"disabled": false,
-											"type": "any",
-											"value": "est laborum dolore exercitation",
 											"key": "petId",
+											"value": "est laborum dolore exercitation",
 											"description": "(Required) The id of the pet to retrieve"
 										}
 									]
-								},
-								"method": "GET",
-								"body": {}
+								}
 							},
 							"status": "OK",
 							"code": 200,
+							"_postman_previewlanguage": "json",
 							"header": [
 								{
 									"key": "Content-Type",
 									"value": "application/json"
 								}
 							],
-							"body": "{\n  \"id\": -84003897,\n  \"name\": \"veniam ipsum eiusmod in\",\n  \"tag\": \"voluptate elit esse aliquip labore\"\n}",
 							"cookie": [],
-							"_postman_previewlanguage": "json"
+							"body": "{\n  \"id\": -84003897,\n  \"name\": \"veniam ipsum eiusmod in\",\n  \"tag\": \"voluptate elit esse aliquip labore\"\n}"
 						},
 						{
-							"id": "b63377c9-5a79-40bc-ac4a-fcdfd6fce237",
+							"id": "cafe2e57-f5e7-4a94-9dbf-91bdeb696c8b",
 							"name": "unexpected error",
 							"originalRequest": {
+								"method": "GET",
+								"header": [],
 								"url": {
+									"raw": "{{baseUrl}}/pets/:petId",
+									"host": [
+										"{{baseUrl}}"
+									],
 									"path": [
 										"pets",
 										":petId"
 									],
-									"host": [
-										"{{baseUrl}}"
-									],
-									"query": [],
 									"variable": [
 										{
-											"disabled": false,
-											"type": "any",
-											"value": "est laborum dolore exercitation",
 											"key": "petId",
+											"value": "est laborum dolore exercitation",
 											"description": "(Required) The id of the pet to retrieve"
 										}
 									]
-								},
-								"method": "GET",
-								"body": {}
+								}
 							},
 							"status": "Internal Server Error",
 							"code": 500,
+							"_postman_previewlanguage": "json",
 							"header": [
 								{
 									"key": "Content-Type",
 									"value": "application/json"
 								}
 							],
-							"body": "{\n  \"code\": 96595496,\n  \"message\": \"aliqua deserunt aliquip\"\n}",
 							"cookie": [],
-							"_postman_previewlanguage": "json"
+							"body": "{\n  \"code\": 96595496,\n  \"message\": \"aliqua deserunt aliquip\"\n}"
 						}
-					],
-					"event": [],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					}
+					]
 				}
 			],
-			"event": []
+			"id": "61591ac4-ce27-41dd-b33c-a598849a5108"
 		}
 	],
-	"event": [],
 	"variable": [
 		{
-			"type": "string",
+			"id": "8cefe6c2-6987-407c-822f-e2a889e2651c",
+			"key": "baseUrl",
 			"value": "http://petstore.swagger.io/v1",
-			"key": "baseUrl"
+			"type": "string"
 		}
-	],
-	"info": {
-		"_postman_id": "c4e64f95-a050-44ee-b11a-1858dc92ea41",
-		"name": "Second pet collection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"description": {
-			"content": "",
-			"type": "text/plain"
-		}
-	}
+	]
 }
