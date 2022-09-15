@@ -5,6 +5,7 @@ gitIntegrationId = 6585
 
 [relations.collections]
 rootDirectory = postman/collections
+files[] = {"id":"896503-39c9e2ae-155a-474d-b45c-2be76aa23dab","path":"kkk.json","metaData":{}}
 
 [relations.collections.metaData]
 

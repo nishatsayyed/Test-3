@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "39c9e2ae-155a-474d-b45c-2be76aa23dab",
+		"name": "kkk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "896503-39c9e2ae-155a-474d-b45c-2be76aa23dab"
+	},
+	"item": [
+		{
+			"name": "mutations",
+			"item": [
+				{
+					"name": "createTweet",
+					"id": "60ccd723-d514-49f9-b921-b21635143ccf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation createTweet ($body: String) {\n    createTweet (body: $body) {\n        id\n        body\n        date\n    }\n}",
+								"variables": "{\n  \"body\": \"\"\n}"
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTweet",
+					"id": "b525f5a2-4deb-41be-8ef5-2e942a00ce25",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation deleteTweet ($id: ID!) {\n    deleteTweet (id: $id) {\n        id\n        body\n        date\n    }\n}",
+								"variables": "{\n  \"id\": 0\n}"
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "markTweetRead",
+					"id": "b9564738-c4ea-43e8-bf63-81800a9faacf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation markTweetRead ($id: ID!) {\n    markTweetRead (id: $id)\n}",
+								"variables": "{\n  \"id\": 0\n}"
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "f2421289-0b51-4eb1-9a45-3a4fbd45b9ac"
+		},
+		{
+			"name": "queries",
+			"item": [
+				{
+					"name": "Tweet",
+					"id": "4bfedb96-3333-4e38-8962-5c1c851297e2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query Tweet ($id: ID!) {\n    Tweet (id: $id) {\n        id\n        body\n        date\n    }\n}",
+								"variables": "{\n  \"id\": 0\n}"
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tweets",
+					"id": "b8de9e2f-6fb3-400e-9ba0-901b8db57d28",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query Tweets ($limit: Int, $skip: Int, $sort_field: String, $sort_order: String) {\n    Tweets (limit: $limit, skip: $skip, sort_field: $sort_field, sort_order: $sort_order) {\n        id\n        body\n        date\n    }\n}",
+								"variables": "{\n  \"limit\": 0,\n  \"skip\": 0,\n  \"sort_field\": \"\",\n  \"sort_order\": \"\"\n}"
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TweetsMeta",
+					"id": "a456381c-e03b-4bac-98d9-f84ed7b74b0b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query TweetsMeta {\n    TweetsMeta {\n        count\n    }\n}",
+								"variables": "{}"
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"id": "b723dbff-040e-4116-87af-5ab7de9f5fe4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query User ($id: ID!) {\n    User (id: $id) {\n        id\n        username\n        first_name\n        last_name\n        full_name\n        avatar_url\n    }\n}",
+								"variables": "{\n  \"id\": 0\n}"
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Notifications",
+					"id": "86d33ac0-d45f-43c5-8680-7b763a5aaceb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query Notifications ($limit: Int) {\n    Notifications (limit: $limit) {\n        id\n        date\n        type\n    }\n}",
+								"variables": "{\n  \"limit\": 0\n}"
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NotificationsMeta",
+					"id": "8bc05d98-db99-4fd6-b6e6-56d3abcbec02",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query NotificationsMeta {\n    NotificationsMeta {\n        count\n    }\n}",
+								"variables": "{}"
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "02372899-5ddc-47b8-87d0-d5330c67b967"
+		}
+	],
+	"variable": [
+		{
+			"id": "url",
+			"key": "url",
+			"value": "",
+			"type": "any",
+			"description": {
+				"content": "URL for the request.",
+				"type": "text/plain"
+			}
+		}
+	]
+}
